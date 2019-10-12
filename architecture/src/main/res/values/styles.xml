@@ -1,0 +1,51 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base"></style>
+
+    <style name="AppThemeGray" parent="AppTheme">
+        <!-- toolbar 颜色 -->
+        <item name="colorPrimary">#c9c9ce</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">#c9c9ce</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppStreet" parent="AppTheme">
+        <item name="colorPrimary">#dd3333</item>
+    </style>
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- toolbar 颜色 -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!-- 状态栏颜色 -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- 窗口的背景颜色 -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="actionOverflowMenuStyle">@style/MenuStyle</item>
+    </style>
+
+    <!--菜单样式-->
+    <style name="MenuStyle" parent="@style/Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+        <!--菜单与toolbar的距离-->
+        <item name="android:dropDownVerticalOffset">5dp</item>
+        <!--菜单背景色-->
+        <item name="android:popupBackground">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowBackground">@color/dig_background_color</item>
+    </style>
+
+    <style name="DialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+</resources>

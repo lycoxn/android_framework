@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#030303</color>
+    <color name="colorTitle">#030303</color>
+    <color name="dig_background_color">#a0000000</color>
+    <color name="white">#ffffff</color>
+    <color name="bg_toolbar_search">#c9c9ce</color>
+    <color name="black">#000000</color>
+    <color name="comment_grey">#999999</color>
+    <color name="divider">#cccccc</color>
+    <color name="banckground_color">#f2f1f6</color>
+    <color name="cat_list">#f2f1f6</color>
+    <color name="lable_blue">#05a3fa</color>
+    <color name="EditTextColor">#333333</color>
+    <color name="diaphaneity_grey">#4D636363</color>
+    <color name="item_button_text">#FF636363</color>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="toolbar_padding_top">0dp</dimen>
+    <dimen name="item_height">45dp</dimen>
+    <dimen name="divider">0.5dp</dimen>
+</resources>

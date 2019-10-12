@@ -1,0 +1,60 @@
+/*
+ * Copyright (C) 2018 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/**
+ * Shared file between builds so that they can all use the same dependencies and
+ * maven repositories.
+ **/
+ext.core = [:]
+def versions = [:]
+versions.multi = "1.0.3"
+versions.leak = "leakcanary-android:2.0-alpha-3"
+versions.oldLeak = "leakcanary-android:1.6.3"
+versions.smartRefresh = "1.1.0-andx-14"
+versions.smartRefreshSupport = "legacy-support-v4:1.0.0"
+//versions.permissions = "4.5.0"
+versions.easyPermission = "easypermissions:3.0.0"
+ext.versions = versions
+
+def multidex = [:]
+multidex.multi = "com.android.support:multidex:$versions.multi"
+core.multidex = multidex
+
+def leakcanary = [:]
+leakcanary.leak = "com.squareup.leakcanary:$versions.leak"
+leakcanary.oldLeakDebug = "com.squareup.leakcanary:$versions.oldLeak"
+leakcanary.oldLeakRelease = "com.squareup.leakcanary:$versions.oldLeak"
+leakcanary.oldLeakDebugSupport = "com.squareup.leakcanary:$versions.oldLeak" // Optional, if you use support library fragments:
+core.leakcanary = leakcanary
+
+def smartRefresh = [:]
+smartRefresh.refresh = "com.scwang.smartrefresh:SmartRefreshLayout:$versions.smartRefresh"
+smartRefresh.header = "com.scwang.smartrefresh:SmartRefreshHeader:$versions.smartRefresh"//没有使用特殊Header，可以不加这行
+smartRefresh.support = "androidx.legacy:$versions.smartRefreshSupport"
+core.smartRefresh = smartRefresh
+
+//def permissionsDispatcher = [:]
+//permissionsDispatcher.dispather = "org.permissionsdispatcher:permissionsdispatcher:$versions.permissions"
+//permissionsDispatcher.processor = "org.permissionsdispatcher:permissionsdispatcher-processor:$versions.permissions"
+//core.permission = permissionsDispatcher
+
+def easyPermission = [:]
+easyPermission.permission = "pub.devrel:$versions.easyPermission"
+core.permission = easyPermission
+
+ext.core = core
+
